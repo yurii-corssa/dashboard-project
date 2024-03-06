@@ -1,11 +1,11 @@
 {
-  "name": "vite-vanilla-template",
+  "name": "dashboard-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vite-vanilla-template/",
+    "build": "vite build --base=/dashboard-project/",
     "preview": "vite preview",
     "watch": "npx vite build --watch"
   },
