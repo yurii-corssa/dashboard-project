@@ -1,4 +1,4 @@
-@use "welcome";
-@use "co-workers";
-@use "tasks";
-@use "reports";
+@forward "welcome";
+@forward "co-workers";
+@forward "tasks";
+@forward "reports";

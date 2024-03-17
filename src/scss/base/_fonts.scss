@@ -1,0 +1,12 @@
+@use "../utils/variables" as var;
+
+@each $key, $value in var.$font-weights {
+  @font-face {
+    font-family: var.$main-font;
+    src: url("../fonts/#{var.$main-font}-#{$key}.woff2") format("woff2"),
+      url("../fonts/#{var.$main-font}-#{$key}.woff") format("woff");
+    font-weight: $value;
+    font-style: normal;
+    font-display: swap;
+  }
+}
