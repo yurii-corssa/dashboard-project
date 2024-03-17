@@ -7,9 +7,19 @@
     <title>Dashboard</title>
   </head>
 
-  <body>
+  <body class="crm-page">
     <aside class="sidebar js-menu" id="sidebar-menu">
       <nav class="menu">
+        <button
+          class="menu-btn js-menu-close"
+          type="button"
+          aria-label="Close menu"
+        >
+          <svg class="menu-btn-icon" width="20" height="20">
+            <use href="./img/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+
         <a href="./index.html" class="logo">
           <svg class="logo__icon" width="24" height="24">
             <use href="./img/icons.svg#icon-logo"></use>
@@ -94,7 +104,12 @@
     </aside>
 
     <header class="header">
-      <button class="menu-btn" type="button">
+      <button
+        class="menu-btn js-menu-open"
+        type="button"
+        aria-expanded="false"
+        aria-controls="sidebar-menu"
+      >
         <svg class="menu-btn-icon" width="24" height="24">
           <use href="./img/icons.svg#icon-menu"></use>
         </svg>
