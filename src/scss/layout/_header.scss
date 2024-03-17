@@ -1,0 +1,7 @@
+@use "../utils/mixins" as mx;
+
+.header {
+  @include mx.mq("lg") {
+    grid-area: header;
+  }
+}

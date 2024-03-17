@@ -1,1 +1,7 @@
+@use "../utils/mixins" as mx;
 
+.main {
+  @include mx.mq("lg") {
+    grid-area: main;
+  }
+}

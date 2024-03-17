@@ -4,7 +4,7 @@
 @use "variables" as var;
 @use "functions" as fn;
 
-@mixin mq($bp: "sm", $type: min, $is-retina: false) {
+@mixin mq($bp: "sm", $type: "min", $is-retina: false) {
   @if map.has-key(var.$breacpoints, $bp) {
     $width: map.get(var.$breacpoints, $bp);
 
