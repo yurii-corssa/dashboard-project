@@ -13,79 +13,79 @@
     <aside class="sidebar js-menu" id="sidebar-menu">
       <nav class="menu">
         <a href="./index.html" class="logo">
-          <svg class="logo-icon" width="24" height="24">
+          <svg class="logo__icon" width="24" height="24">
             <use href="/dashboard-project/assets/icons.svg#icon-logo"></use>
           </svg>
           Cat CRM
         </a>
 
-        <ul class="menu-list">
-          <li class="menu-item">
-            <a href="./index.html" class="menu-link current">
-              <svg class="menu-icon" width="20" height="20">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="./index.html" class="menu__link current">
+              <svg class="menu__icon" width="20" height="20">
                 <use href="/dashboard-project/assets/icons.svg#menu-columns"></use>
               </svg>
               Overview
             </a>
           </li>
 
-          <li class="menu-item">
-            <a href="#" class="menu-link">
-              <svg class="menu-icon" width="20" height="20">
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <svg class="menu__icon" width="20" height="20">
                 <use href="/dashboard-project/assets/icons.svg#menu-person-plus"></use>
               </svg>
               Contacts
             </a>
           </li>
 
-          <li class="menu-item">
-            <a href="#" class="menu-link">
-              <svg class="menu-icon" width="20" height="20">
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <svg class="menu__icon" width="20" height="20">
                 <use href="/dashboard-project/assets/icons.svg#menu-briefcase"></use>
               </svg>
               Companies
             </a>
           </li>
 
-          <li class="menu-item">
-            <a href="#" class="menu-link">
-              <svg class="menu-icon" width="20" height="20">
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <svg class="menu__icon" width="20" height="20">
                 <use href="/dashboard-project/assets/icons.svg#menu-coin"></use>
               </svg>
               Deals
             </a>
           </li>
 
-          <li class="menu-item">
-            <a href="#" class="menu-link">
-              <svg class="menu-icon" width="20" height="20">
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <svg class="menu__icon" width="20" height="20">
                 <use href="/dashboard-project/assets/icons.svg#menu-clipboard"></use>
               </svg>
               Document
             </a>
           </li>
 
-          <li class="menu-item">
-            <a href="#" class="menu-link">
-              <svg class="menu-icon" width="20" height="20">
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <svg class="menu__icon" width="20" height="20">
                 <use href="/dashboard-project/assets/icons.svg#menu-envelope"></use>
               </svg>
               Mesage
             </a>
           </li>
 
-          <li class="menu-item">
-            <a href="#" class="menu-link">
-              <svg class="menu-icon" width="20" height="20">
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <svg class="menu__icon" width="20" height="20">
                 <use href="/dashboard-project/assets/icons.svg#menu-calendar"></use>
               </svg>
               Calendar
             </a>
           </li>
 
-          <li class="menu-item">
-            <a href="#" class="menu-link">
-              <svg class="menu-icon" width="20" height="20">
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <svg class="menu__icon" width="20" height="20">
                 <use href="/dashboard-project/assets/icons.svg#menu-journal"></use>
               </svg>
               Report
@@ -126,7 +126,7 @@
     <main class="main">
       <section class="welcome">
         <h1 class="page-title">
-          <span class="page-title-accent">Hi Yaroslav,</span>
+          <span class="page-title_accent">Hi Yaroslav,</span>
           Welcome into Cat CRM Dashboard
         </h1>
 
@@ -138,7 +138,392 @@
         </button>
       </section>
 
-      <section class="co-workers">Co-Workers section</section>
+      <section class="co-workers">
+        <div class="co-workers__details">
+          <h2 class="co-workers__title">
+            <span>Co-workers</span>
+            | Marketing department
+          </h2>
+
+          <ul class="co-workers__details-list">
+            <li class="co-workers__details-item">
+              <details class="details-item__details">
+                <summary class="details-item__data">
+                  <svg class="details-item__icon" width="16" height="16">
+                    <use class="plus" href="/dashboard-project/assets/icons.svg#icon-plus"></use>
+                    <use class="minus" href="/dashboard-project/assets/icons.svg#icon-minus"></use>
+                  </svg>
+
+                  <div class="details-item__bio">
+                    <div class="thumb">
+                      <img
+                        src="/dashboard-project/assets/avatar-1.jpg"
+                        alt="avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+
+                    <p class="details-item__caption">Andrew Mike</p>
+                  </div>
+
+                  <div class="details-item__controls">
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon success"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-arrow-clockwise"></use>
+                      </svg>
+                    </button>
+
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon error"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-x-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </summary>
+
+                <ul class="details-item__info-list">
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Job position</h3>
+                    <p>Develop</p>
+                  </li>
+
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Since</h3>
+                    <p>2013</p>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="co-workers__details-item">
+              <details class="details-item__details">
+                <summary class="details-item__data">
+                  <svg class="details-item__icon" width="16" height="16">
+                    <use class="plus" href="/dashboard-project/assets/icons.svg#icon-plus"></use>
+                    <use class="minus" href="/dashboard-project/assets/icons.svg#icon-minus"></use>
+                  </svg>
+
+                  <div class="details-item__bio">
+                    <div class="thumb">
+                      <img
+                        src="/dashboard-project/assets/avatar-1.jpg"
+                        alt="avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+
+                    <p class="details-item__caption">Andrew Mike</p>
+                  </div>
+
+                  <div class="details-item__controls">
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon success"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-arrow-clockwise"></use>
+                      </svg>
+                    </button>
+
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon error"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-x-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </summary>
+
+                <ul class="details-item__info-list">
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Job position</h3>
+                    <p>Develop</p>
+                  </li>
+
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Since</h3>
+                    <p>2013</p>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="co-workers__details-item">
+              <details class="details-item__details">
+                <summary class="details-item__data">
+                  <svg class="details-item__icon" width="16" height="16">
+                    <use class="plus" href="/dashboard-project/assets/icons.svg#icon-plus"></use>
+                    <use class="minus" href="/dashboard-project/assets/icons.svg#icon-minus"></use>
+                  </svg>
+
+                  <div class="details-item__bio">
+                    <div class="thumb">
+                      <img
+                        src="/dashboard-project/assets/avatar-1.jpg"
+                        alt="avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+
+                    <p class="details-item__caption">Andrew Mike</p>
+                  </div>
+
+                  <div class="details-item__controls">
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon success"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-arrow-clockwise"></use>
+                      </svg>
+                    </button>
+
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon error"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-x-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </summary>
+
+                <ul class="details-item__info-list">
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Job position</h3>
+                    <p>Develop</p>
+                  </li>
+
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Since</h3>
+                    <p>2013</p>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="co-workers__details-item">
+              <details class="details-item__details">
+                <summary class="details-item__data">
+                  <svg class="details-item__icon" width="16" height="16">
+                    <use class="plus" href="/dashboard-project/assets/icons.svg#icon-plus"></use>
+                    <use class="minus" href="/dashboard-project/assets/icons.svg#icon-minus"></use>
+                  </svg>
+
+                  <div class="details-item__bio">
+                    <div class="thumb">
+                      <img
+                        src="/dashboard-project/assets/avatar-1.jpg"
+                        alt="avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+
+                    <p class="details-item__caption">Andrew Mike</p>
+                  </div>
+
+                  <div class="details-item__controls">
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon success"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-arrow-clockwise"></use>
+                      </svg>
+                    </button>
+
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon error"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-x-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </summary>
+
+                <ul class="details-item__info-list">
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Job position</h3>
+                    <p>Develop</p>
+                  </li>
+
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Since</h3>
+                    <p>2013</p>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="co-workers__details-item">
+              <details class="details-item__details">
+                <summary class="details-item__data">
+                  <svg class="details-item__icon" width="16" height="16">
+                    <use class="plus" href="/dashboard-project/assets/icons.svg#icon-plus"></use>
+                    <use class="minus" href="/dashboard-project/assets/icons.svg#icon-minus"></use>
+                  </svg>
+
+                  <div class="details-item__bio">
+                    <div class="thumb">
+                      <img
+                        src="/dashboard-project/assets/avatar-1.jpg"
+                        alt="avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+
+                    <p class="details-item__caption">Andrew Mike</p>
+                  </div>
+
+                  <div class="details-item__controls">
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon success"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-arrow-clockwise"></use>
+                      </svg>
+                    </button>
+
+                    <button type="button" class="controls-btn">
+                      <svg
+                        class="controls-btn-icon error"
+                        width="20"
+                        height="20"
+                      >
+                        <use href="/dashboard-project/assets/icons.svg#icon-x-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </summary>
+
+                <ul class="details-item__info-list">
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Job position</h3>
+                    <p>Develop</p>
+                  </li>
+
+                  <li class="details-item__info-item">
+                    <h3 class="details-item__info-title">Since</h3>
+                    <p>2013</p>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="co-workers__board">
+          <li class="board__item">
+            <div class="board__item_left">
+              <h3 class="board__item-caption">Send benefit review by Sunday</h3>
+
+              <p class="board__item-details">
+                Due date: <time>December 23, 2023</time>
+              </p>
+
+              <div class="board__item-coworker person">
+                <div class="person__thumb">
+                  <img
+                    class="person__avatar"
+                    src="/dashboard-project/assets/avatar-1.jpg"
+                    alt="George Fields"
+                    width="42"
+                    height="63"
+                  />
+                </div>
+                <p class="person__caption">George Fields</p>
+              </div>
+            </div>
+
+            <div class="board__item_right">
+              <p class="board__item-tag">Reminder</p>
+              <p class="badge__item-lable_warning">Completed</p>
+            </div>
+          </li>
+
+          <li class="board__item">
+            <div class="board__item_left">
+              <h3 class="board__item-caption">Send benefit review by Sunday</h3>
+
+              <p class="board__item-details">
+                Due date: <time>December 23, 2023</time>
+              </p>
+
+              <div class="board__item-coworker person">
+                <div class="person__thumb">
+                  <img
+                    class="person__avatar"
+                    src="/dashboard-project/assets/avatar-2.jpg"
+                    alt="Amanda Pitt"
+                    width="42"
+                    height="63"
+                  />
+                </div>
+                <p class="person__caption">Amanda Pitt</p>
+              </div>
+            </div>
+
+            <div class="board__item_right">
+              <p class="board__item-tag">Call</p>
+              <p class="badge__item-lable_danger">Ended</p>
+            </div>
+          </li>
+
+          <li class="board__item hide">
+            <div class="board__item_left">
+              <h3 class="board__item-caption">Send benefit review by Sunday</h3>
+
+              <p class="board__item-details">
+                Due date: <time>December 23, 2023</time>
+              </p>
+
+              <div class="board__item-coworker person">
+                <div class="person__thumb">
+                  <img
+                    class="person__avatar"
+                    src="/dashboard-project/assets/avatar-2.jpg"
+                    alt="Amanda Pitt"
+                    width="42"
+                    height="63"
+                  />
+                </div>
+                <p class="person__caption">Amanda Pitt</p>
+              </div>
+            </div>
+
+            <div class="board__item_right">
+              <p class="board__item-tag">Reminder</p>
+              <p class="badge__item-lable_success">Completed</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
       <section class="tasks">Tasks section</section>
 
