@@ -180,6 +180,12 @@ summary {
   min-width: 375px;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
 @media only screen and (min-width: 1200px){
   .crm-page {
     display: grid;
@@ -192,6 +198,10 @@ summary {
   }
   .header {
     grid-area: header;
+    justify-content: space-between;
+    background-color: #1c1c24;
+    box-shadow: 0px 1px 0px 0px #292932 inset;
+    padding: 24px 36px;
   }
   .main {
     grid-area: main;
