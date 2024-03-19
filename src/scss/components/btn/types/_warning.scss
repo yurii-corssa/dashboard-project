@@ -1,0 +1,20 @@
+@use "../../../utils/functions" as fn;
+
+.btn_warning {
+  background-color: fn.get-color("warning");
+
+  &:active {
+    background-color: darken(fn.get-color("warning"), 20%);
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      background-color: darken(fn.get-color("warning"), 10%);
+    }
+  }
+
+  &[disabled] {
+    background-color: fn.get-color("ligth-secondary");
+  }
+}

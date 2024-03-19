@@ -1,0 +1,20 @@
+@use "../../../utils/functions" as fn;
+
+.btn_success {
+  background-color: fn.get-color("success");
+
+  &:active {
+    background-color: darken(fn.get-color("success"), 20%);
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      background-color: darken(fn.get-color("success"), 10%);
+    }
+  }
+
+  &[disabled] {
+    background-color: fn.get-color("ligth-secondary");
+  }
+}

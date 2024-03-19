@@ -1,0 +1,18 @@
+@use "../../../utils/functions" as fn;
+
+.btn_secondary {
+  &:active {
+    color: fn.get-color("accent-tertiary");
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      color: fn.get-color("accent-secondary");
+    }
+  }
+
+  &[disabled] {
+    color: fn.get-color("ligth-secondary");
+  }
+}

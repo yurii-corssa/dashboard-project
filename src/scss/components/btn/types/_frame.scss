@@ -1,0 +1,20 @@
+@use "../../../utils/functions" as fn;
+
+.btn_frame {
+  border-color: fn.get-color("accent-primary");
+
+  &:active {
+    border-color: fn.get-color("accent-tertiary");
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      border-color: fn.get-color("accent-secondary");
+    }
+  }
+
+  &[disabled] {
+    border-color: rgba(fn.get-color("ligth-secondary"), 0.5);
+  }
+}
