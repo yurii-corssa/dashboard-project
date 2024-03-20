@@ -16,6 +16,8 @@
     pointer-events: none;
     visibility: hidden;
 
+    @include mx.ease("fast", opacity, visibility);
+
     &.is-open {
       opacity: 1;
       pointer-events: initial;

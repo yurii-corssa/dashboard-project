@@ -1,0 +1,24 @@
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.notification {
+  @include mx.ease("slow", opacity);
+
+  flex-shrink: 0;
+
+  display: block;
+  min-width: 28px;
+  height: 20px;
+  padding: 0 10px;
+  text-align: center;
+
+  color: fn.get-color("light");
+  border-radius: 12px;
+  background-color: fn.get-color("danger");
+
+  opacity: 0;
+
+  &.is-notify {
+    opacity: 1;
+  }
+}

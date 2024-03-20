@@ -1,0 +1,71 @@
+@use "../utils/placeholders";
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.menu {
+  position: relative;
+  transform: translate(-100%);
+
+  width: 248px;
+  height: 100%;
+
+  background-color: fn.get-color("dark");
+
+  @include mx.ease("fast", transform);
+
+  .sidebar.is-open & {
+    transform: translate(0);
+    transition-delay: 150ms;
+  }
+
+  @include mx.mq("lg") {
+    transform: translate(0);
+    width: 100%;
+  }
+}
+
+.menu__list {
+  border-top: 1px solid fn.get-color("dark-tertiary");
+}
+
+.menu__link {
+  @extend %main-details;
+  @include mx.ease("very-fast", color);
+
+  position: relative;
+  display: flex;
+  gap: 24px;
+  padding: 16px 12px 16px 20px;
+
+  &:hover,
+  &:focus {
+    color: fn.get-color("light-primary");
+  }
+
+  &.current {
+    color: fn.get-color("light");
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      display: block;
+      width: 4px;
+      height: 32px;
+
+      background-color: fn.get-color("light");
+      border-radius: 0px 100px 100px 0px;
+    }
+  }
+}
+
+.menu__icon {
+  fill: fn.get-color("current");
+}
+
+.menu__notification {
+  margin-left: auto;
+}

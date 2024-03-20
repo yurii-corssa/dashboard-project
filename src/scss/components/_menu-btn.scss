@@ -1,0 +1,39 @@
+@use "../utils/placeholders";
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.menu-btn {
+  @extend %main-details;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-right: auto;
+  color: fn.get-color("light");
+
+  @include mx.mq("lg") {
+    display: none;
+  }
+
+  .sidebar & {
+    @include mx.ease("slow", transform, opacity);
+    transition-delay: 400ms, 300ms;
+
+    position: absolute;
+    top: 16px;
+    right: -36px;
+
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+
+  .sidebar.is-open & {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.menu-btn-icon {
+  fill: fn.get-color("current");
+}
