@@ -1,0 +1,37 @@
+@use "../utils/placeholders";
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.search-field {
+  @include mx.ease("fast", width, color);
+
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+  width: 20px;
+  color: fn.get-color("light-tertiary");
+  overflow: hidden;
+
+  &:focus-within {
+    width: 100%;
+    color: fn.get-color("light");
+  }
+}
+
+.search-icon {
+  flex-shrink: 0;
+  fill: fn.get-color("current");
+}
+
+.search-input {
+  @extend %main-details;
+
+  width: 100%;
+  &::placeholder {
+    color: fn.get-color("light-tertiary");
+  }
+}

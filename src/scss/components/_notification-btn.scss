@@ -1,0 +1,35 @@
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.notification-btn {
+  position: relative;
+
+  display: inline-flex;
+  //   align-items: center;
+  //   justify-content: center;
+
+  color: fn.get-color("light-tertiary");
+
+  &::after {
+    @include mx.ease("slow", opacity, background-color);
+
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    // display: block;
+    width: 8px;
+    height: 8px;
+    background-color: fn.get-color("light-tertiary");
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  &[data-notify="true"]::after {
+    background-color: fn.get-color("danger");
+    opacity: 1;
+  }
+}
+.notification-btn-icon {
+  fill: fn.get-color("current");
+}
