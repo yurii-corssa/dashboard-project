@@ -154,7 +154,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.menu-btn, .menu__link {
+.search-input, .menu-btn, .menu__link {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.43;
@@ -197,6 +197,7 @@ summary {
 .header {
   display: flex;
   align-items: center;
+  gap: 24px;
   padding: 16px;
 }
 
@@ -440,6 +441,61 @@ summary {
   fill: currentColor;
 }
 
+.notification-btn {
+  position: relative;
+  display: inline-flex;
+  color: #92929d;
+}
+.notification-btn::after {
+  transition: 600ms ease;
+  transition-property: opacity, background-color;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #92929d;
+  border-radius: 50%;
+  opacity: 0;
+}
+.notification-btn[data-notify=true]::after {
+  background-color: #fc5a5a;
+  opacity: 1;
+}
+
+.notification-btn-icon {
+  fill: currentColor;
+}
+
+.search-field {
+  transition: 300ms ease;
+  transition-property: width, color;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 20px;
+  color: #92929d;
+  overflow: hidden;
+}
+.search-field:focus-within {
+  width: 100%;
+  color: #fff;
+}
+
+.search-icon {
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.search-input {
+  width: 100%;
+}
+.search-input::placeholder {
+  color: #92929d;
+}
 @media only screen and (min-width: 768px){
   .main {
     gap: 36px;
@@ -448,7 +504,6 @@ summary {
     grid-template-areas: "welcome welcome" "co-workers co-workers" "tasks reports";
   }
 }
-
 @media only screen and (min-width: 1200px){
   .crm-page {
     display: grid;
@@ -482,7 +537,6 @@ summary {
     display: none;
   }
 }
-
 @media only screen and (max-width: 1199.98px){
   .sidebar {
     position: fixed;
@@ -504,7 +558,6 @@ summary {
     visibility: visible;
   }
 }
-
 @media (hover: hover){
   .btn_default:hover, .btn_default:focus {
     background-color: #777785;
