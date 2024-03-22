@@ -20,6 +20,10 @@
     width: 100%;
     color: fn.get-color("light");
   }
+
+  @include mx.mq("lg") {
+    width: 100%;
+  }
 }
 
 .search-icon {
