@@ -1,0 +1,16 @@
+@use "../utils/placeholders";
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+@each $value in "danger", "warning", "success", "info" {
+  .badge__item-lable_#{$value} {
+    @extend %accent-details;
+
+    min-width: 96px;
+    text-align: center;
+    color: fn.get-color("light");
+    padding: 4px 8px;
+    border-radius: 20px;
+    background-color: fn.get-color($value);
+  }
+}
