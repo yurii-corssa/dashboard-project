@@ -1,0 +1,72 @@
+@use "../../utils/placeholders";
+@use "../../utils/functions" as fn;
+@use "../../utils/mixins" as mx;
+
+.co-workers__board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.board__item {
+  @extend %section-frame;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 43px;
+  flex-grow: 1;
+
+  background-color: fn.get-color("dark-tertiary");
+
+  @include mx.mq("md") {
+    background-color: fn.get-color("dark-secondary");
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.board__item-caption {
+  @extend %accent-text;
+
+  color: fn.get-color("light");
+  margin-bottom: 8px;
+}
+
+.board__item-details {
+  @extend %main-details;
+
+  color: fn.get-color("light");
+  margin-bottom: 20px;
+
+  time {
+    color: fn.get-color("light-secondary");
+  }
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.person__thumb {
+  @include mx.frame(24px, $is-circle: true);
+}
+
+.person__caption {
+  @extend %main-details;
+}
+
+.board__item_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 100%;
+}
+
+.board__item-tag {
+  @extend %main-details;
+}

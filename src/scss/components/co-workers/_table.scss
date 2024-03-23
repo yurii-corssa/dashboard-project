@@ -1,0 +1,104 @@
+@use "../../utils/functions" as fn;
+@use "../../utils/mixins" as mx;
+
+.co-workers__table {
+  display: none;
+
+  @include mx.mq("md") {
+    @import "../../utils/placeholders";
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    width: 100%;
+
+    caption {
+      @extend %main-details;
+
+      margin-bottom: 36px;
+      color: fn.get-color("light-secondary");
+
+      span {
+        @extend %accent-text;
+      }
+    }
+
+    thead {
+      position: sticky;
+      top: -1px;
+      z-index: 100;
+
+      background-color: fn.get-color("dark-secondary");
+
+      th {
+        @extend %accent-details;
+
+        position: relative;
+
+        color: fn.get-color("light");
+
+        padding: 12px 0;
+        border-bottom-width: 1px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+
+          display: block;
+
+          width: 100%;
+          height: 1px;
+
+          background-color: fn.get-color("dark-tertiary");
+        }
+
+        &:first-child {
+          padding-left: 7px;
+        }
+      }
+    }
+
+    tbody {
+      @extend %main-details;
+
+      td {
+        position: relative;
+
+        padding: 12px 0;
+        vertical-align: middle;
+        border-bottom-width: 1px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+
+          display: block;
+
+          width: 100%;
+          height: 1px;
+
+          background-color: fn.get-color("dark-tertiary");
+        }
+      }
+
+      .co-workers__controls {
+        display: flex;
+        gap: 16px;
+      }
+
+      .thumb {
+        @include mx.frame(24px, $is-circle: true);
+      }
+    }
+
+    tr {
+      display: grid;
+      grid-template-columns: 0.3fr repeat(2, 1fr) 0.5fr 60px;
+    }
+  }
+}

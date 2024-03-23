@@ -26,6 +26,7 @@ $btn-text-color: #fafafb !default;
 // );
 
 //button base styles
+@debug $btn-layer-spacing;
 @import "base";
 
 //button variants

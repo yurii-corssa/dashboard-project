@@ -1,0 +1,126 @@
+@use "../../utils/placeholders";
+@use "../../utils/functions" as fn;
+@use "../../utils/mixins" as mx;
+
+.co-workers__details-list {
+  @include mx.mq("md") {
+    display: none;
+  }
+}
+
+.details-item__details {
+  @extend %main-details;
+  transition: min-height 300ms ease;
+
+  min-height: 40px;
+
+  .co-workers__details-item:not(:first-child):not(:last-child) & {
+    padding: 16px 0;
+  }
+
+  .co-workers__details-item:first-child & {
+    padding-bottom: 16px;
+  }
+
+  .co-workers__details-item:last-child & {
+    padding-top: 16px;
+  }
+}
+
+.details-item__data {
+  @include mx.ease("fast", margin);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .details-item__details[open] & {
+    margin-bottom: 8px;
+  }
+}
+
+.details-item__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid;
+  border-color: fn.get-color("light-tertiary");
+  border-radius: 4px;
+  cursor: pointer;
+
+  .plus {
+    @include mx.ease("fast", opacity);
+
+    fill: fn.get-color("light-tertiary");
+    opacity: 0;
+
+    .details-item__details:not([open]) & {
+      opacity: 1;
+    }
+  }
+
+  .minus {
+    @include mx.ease("fast", opacity);
+
+    fill: fn.get-color("light-tertiary");
+    opacity: 0;
+
+    .details-item__details[open] & {
+      opacity: 1;
+    }
+  }
+}
+
+.details-item__bio {
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .thumb {
+    @include mx.frame(24px, $is-circle: true);
+  }
+}
+
+.details-item__controls {
+  display: flex;
+  gap: 16px;
+}
+
+.controls-btn {
+  display: inline-flex;
+
+  width: 20px;
+  height: 20px;
+
+  .controls-btn-icon {
+    &.success {
+      fill: fn.get-color("success");
+    }
+
+    &.error {
+      fill: fn.get-color("danger");
+    }
+  }
+}
+
+.details-item__info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 12px;
+
+  width: fit-content;
+  padding: 0 32px;
+
+  .details-item__info-title {
+    @extend %accent-details;
+
+    color: fn.get-color("light");
+  }
+}
