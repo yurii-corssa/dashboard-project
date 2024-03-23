@@ -168,7 +168,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.details-item__info .details-item__info-title {
+.badge__item-lable_danger, .badge__item-lable_warning, .badge__item-lable_success, .badge__item-lable_info, .details-item__info .details-item__info-title {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
@@ -734,6 +734,43 @@ summary {
 .search-input::placeholder {
   color: #92929d;
 }
+
+.badge__item-lable_danger {
+  min-width: 96px;
+  text-align: center;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: #fc5a5a;
+}
+
+.badge__item-lable_warning {
+  min-width: 96px;
+  text-align: center;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: #a461d8;
+}
+
+.badge__item-lable_success {
+  min-width: 96px;
+  text-align: center;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: #82c43c;
+}
+
+.badge__item-lable_info {
+  min-width: 96px;
+  text-align: center;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: #4e75ff;
+}
+
 @media only screen and (min-width: 768px){
   .main {
     gap: 36px;
@@ -849,6 +886,7 @@ summary {
     background-color: #1c1c24;
   }
 }
+
 @media only screen and (min-width: 1200px){
   .board__item {
     padding: 24px;
@@ -894,6 +932,7 @@ summary {
     width: 100%;
   }
 }
+
 @media only screen and (max-width: 1199.98px){
   .sidebar {
     position: fixed;
@@ -915,6 +954,7 @@ summary {
     visibility: visible;
   }
 }
+
 @media (hover: hover){
   .btn_default:hover, .btn_default:focus {
     background-color: #777785;
