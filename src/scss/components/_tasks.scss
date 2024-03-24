@@ -1,3 +1,118 @@
+@use "../utils/placeholders";
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
 .tasks {
+  @extend %section-frame;
+
   grid-area: tasks;
+
+  min-width: 340px;
+  max-height: 420px;
+  background-color: fn.get-color("dark-tertiary");
+}
+
+.tasks__title {
+  @extend %main-details;
+
+  margin-bottom: 28px;
+
+  .tasks__title_accent {
+    @extend %accent-text;
+
+    color: fn.get-color("light");
+  }
+}
+
+.tasks__list {
+  @include mx.scroll-bar;
+
+  max-height: 320px;
+  overflow-y: auto;
+
+  @include mx.mq("md") {
+    margin-right: -14px;
+  }
+}
+
+.tasks__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 16px 6px;
+  border-top: 1px solid;
+  border-color: fn.get-color("light-tertiary");
+}
+
+.tasks__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.tasks__checkbox-icon {
+  @include mx.ease("fast", fill, background-color, border-color);
+
+  fill: fn.get-color("transparent");
+  border: 1px solid;
+  border-color: fn.get-color("light-tertiary");
+  border-radius: 4px;
+
+  .tasks__checkbox-input:checked + & {
+    fill: fn.get-color("light");
+    background-color: fn.get-color("accent-primary");
+    border-color: fn.get-color("transparent");
+  }
+
+  .tasks__checkbox-input:focus-visible + & {
+    outline: 2px solid;
+    outline-color: rgba(fn.get-color("light-tertiary"), 0.6);
+    outline-offset: 2px;
+  }
+}
+
+.tasks__info {
+  @extend %main-details;
+
+  flex-grow: 1;
+  padding-right: 32px;
+}
+
+.tasks__heading {
+  color: fn.get-color("light");
+}
+
+.tasks__btn {
+  @include mx.ease("fast", color, transform);
+
+  width: 20px;
+  height: 20px;
+  color: fn.get-color("light-tertiary");
+  border-radius: 50%;
+  transform: rotate(0);
+
+  &:hover {
+    color: fn.get-color("accent-primary");
+    transform: rotate(90deg);
+  }
+
+  &:active {
+    color: fn.get-color("accent-secondary");
+  }
+
+  &:focus-visible {
+    outline: 2px solid;
+    outline-color: rgba(fn.get-color("light-tertiary"), 0.6);
+    outline-offset: 3px;
+  }
+}
+.tasks__btn-icon {
+  fill: fn.get-color("current");
 }
