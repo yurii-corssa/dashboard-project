@@ -14,7 +14,7 @@ $reports-status: (
   grid-area: reports;
 
   min-width: 340px;
-  // max-height: 420px;
+  max-height: 420px;
   background-color: fn.get-color("dark-tertiary");
 }
 
@@ -35,10 +35,6 @@ $reports-status: (
 
   max-height: 320px;
   overflow-y: auto;
-
-  @include mx.mq("md") {
-    margin-right: -14px;
-  }
 }
 
 .reports__item {

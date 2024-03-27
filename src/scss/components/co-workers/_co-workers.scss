@@ -13,14 +13,12 @@
 }
 
 .co-workers__details {
-  padding: 16px;
-  border-radius: 12px;
+  @extend %section-frame;
   background-color: fn.get-color("dark-tertiary");
   margin-bottom: 40px;
 
   @include mx.mq("md") {
     max-height: 400px;
-    padding: 24px;
     margin-bottom: 32px;
     background-color: fn.get-color("dark-secondary");
   }
@@ -47,10 +45,6 @@
 
   max-height: 304px;
   overflow-y: auto;
-
-  @include mx.mq("md") {
-    margin-right: -14px;
-  }
 }
 
 .co-workers__board {
